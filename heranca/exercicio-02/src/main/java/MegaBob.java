@@ -1,8 +1,11 @@
-public class BadFish {
+package main.java;
+
+public class MegaBob {
 
     private int energia;
 
-    public BadFish(){
+
+    public MegaBob(){
         
     }
 

@@ -4,18 +4,15 @@ public class Barco extends Veiculo {
 
     private int registroembarcacao;
 
-    public Barco() {
-
-    }
-
     public Barco(int registroembarcacao) {
+        super();
         this.registroembarcacao = registroembarcacao;
 
     }
 
     // Métodos Getters e Setters
 
-public getRegistroembarcacao(){
+public int getRegistroembarcacao(){
     return registroembarcacao;
 }
 

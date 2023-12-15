@@ -1,23 +1,25 @@
-public class Aviao {
+
+
+public class Aviao extends Veiculo{
     
 
 private int registroaeronautico;
 
-    public Aviao(){
-
-    }
-
     public Aviao (int registroaeronautico){
+        super();
         this.registroaeronautico = registroaeronautico;
+
     }
+
+    
 
     // Métodos Getters e Setters
 
-    public getRegistroaeronautico(){
+    public int getRegistroaeronautico(){
         return registroaeronautico;
     }
     
-    public setRegistroaeronautico(int registroaeronautico){
+    public void setRegistroaeronautico(int registroaeronautico){
         this.registroaeronautico = registroaeronautico;
     }
 

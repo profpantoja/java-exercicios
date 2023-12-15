@@ -1,22 +1,22 @@
 package main.java;
 
-public class Automovel {
+public class Automovel extends Veiculo {
 
     private int numRenavan;
     private int placa;
 
-    public Automovel() {
-
-    }
-
     public Automovel(int numRenavan, int placa) {
+        super();
         this.numRenavan = numRenavan;
         this.placa = placa;
+
     }
+
+    
 
     // Métodos Getters e Setters
 
-    public getNumRenavan() {
+    public int getNumRenavan() {
         return numRenavan;
     }
 
@@ -24,7 +24,7 @@ public class Automovel {
         this.numRenavan = numRenavan;
     }
 
-    public getPlaca() {
+    public int getPlaca() {
             return placa;
         }
 
