@@ -6,7 +6,7 @@ public class Artigo extends Publicacoes {
     private int volume;
     private int numero;
 
-    public Artigo(String titulo, String ano, String autores, int volume,int numero){
+    public Artigo(String titulo, String ano, String autores, int volume, int numero){
         super(titulo,ano,autores);
         this.numero = numero;
         this.volume = volume;

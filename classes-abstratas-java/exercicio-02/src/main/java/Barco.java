@@ -2,25 +2,25 @@ package main.java;
 
 public class Barco extends Veiculo {
 
-    private int registroembarcacao;
+    private int registroEmbarcacao;
 
     public Barco(){
 
     }
 
-    public Barco (int registroembarcacao){
-        this.registroembarcacao = registroembarcacao;
+    public Barco (int registroEmbarcacao){
+        this.registroEmbarcacao = registroEmbarcacao;
     }
 
     // Métodos Getters e Setters
 
     
-    public int getRegitroembarcacao(){
-        return registroembarcacao;
+    public int getRegitroEmbarcacao(){
+        return registroEmbarcacao;
     }
 
-    public void setRegistroembarcacao(int registroembarcacao) {
-        this.registroembarcacao = registroembarcacao;
+    public void setRegistroEmbarcacao(int registroEmbarcacao) {
+        this.registroEmbarcacao = registroEmbarcacao;
 
 
 }

@@ -29,7 +29,10 @@ public class Tese extends Publicacoes{
     }
 
     public void imprimirInformacoes(){
-        System.out.prinln();
+        System.out.prinln(this.nomedapesquisa);
+        System.out.println(this.dataInicio);
+        for(Coordenador c : this.getCoordenadores()){
+            System.out.println("")
     }
 
 

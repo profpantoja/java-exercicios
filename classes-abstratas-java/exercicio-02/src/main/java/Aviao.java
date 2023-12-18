@@ -2,46 +2,46 @@ package main.java;
 
 public class Aviao extends Veiculo {
 
-    private int registroaeronautico;
+    private int registroAeronautico;
 
     public Aviao(){
 
     }
 
-    public Aviao (int registroaeronautico){
-        this.registroaeronautico = registroaeronautico;
+    public Aviao (int registroAeronautico){
+        this.registroAeronautico = registroAeronautico;
     }
 
     // Métodos Getters e Setters
 
-    public getRegistroaeronautico(){
-        return registroaeronautico;
+    public getRegistroAeronautico(){
+        return registroAeronautico;
     }
     
-    public setRegistroaeronautico(int registroaeronautico){
-        this.registroaeronautico = registroaeronautico;
+    public setRegistroAeronautico(int registroAeronautico){
+        this.registroAeronautico = registroAeronautico;
     
 }
 
-public void ligar(){
+    public void ligar(){
     
 }
 
-public void desligar(){
-    System.out.println("Avião desligado");
+    public void desligar(){
+        System.out.println("Avião desligado");
 }
 
-public void mover_frente(){
-    System.out.println("Avião movendo para frente");
+    public void mover_frente(){
+        System.out.println("Avião movendo para frente");
 
 }
 
-public void ré(){
+    public void ré(){
    
 }
 
-public void parar(){
-    System.out.println("Avião parado");
+    public void parar(){
+        System.out.println("Avião parado");
 }
 
 }

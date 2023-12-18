@@ -1,6 +1,9 @@
 package main.java;
 
-public class Pesquisa extends Publicacoes {
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+
+public class Pesquisa {
 
     private String nomedapesquisa;
     private String descricao;
@@ -8,9 +11,10 @@ public class Pesquisa extends Publicacoes {
     private String dataTermino;
     private String areaPesquisa;
 
-    public Pesquisa(String titulo, String ano, String autores, String nomedapesquisa, String descricao,
-            String dataInicio, String dataTermino, String areaPesquisa) {
-        super(titulo, ano, autores);
+    private ArrayList<Coordenador> coordenadores;
+
+    public Pesquisa(String nomedapesquisa, String descricao,String dataInicio, String dataTermino, String areaPesquisa) {
+    
         this.nomedapesquisa = nomedapesquisa;
         this.descricao = descricao;
         this.dataInicio = dataInicio;
@@ -58,9 +62,25 @@ public class Pesquisa extends Publicacoes {
         this.areaPesquisa = areaPesquisa;
     }
 
+    public ArrayList<Coordenador> getCoordenadores(){
+        return coordenadores;
+    }
+
+    public void setCoordenadores(ArrayList<Coordenador>coordenadores){
+        this.coordenadores = coordenadores;
+
+    }
+
 
 
     public void imprimirInformacoes(){
-        System.out.prinln();
+
+        System.out.prinln(this.nomedapesquisa);
+        System.out.println(this.dataInicio);
+        for(Coordenador c : this.getCoordenadores()){
+            System.out.println("");
+
+        }
+        }
     }
 }
