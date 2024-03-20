@@ -1,5 +1,3 @@
-package pantojava.lista02.ex01.src.main.java;
-
 public class Pessoa {
 
     private String name;
@@ -23,33 +21,27 @@ public class Pessoa {
         this.contatos = contatos;
         this.sexo = sexo;
     }
-    public String getName() {
-        return name;
-    }
+
+    public String getName() { return name; }
     public void setName(String name) {
         this.name = name;
     }
-    public String getCpf() {
-        return cpf;
-    }
+
+    public String getCpf() { return cpf; }
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-    public Endereco getEndereco() {
-        return endereco;
-    }
+
+    public Endereco getEndereco() { return endereco; }
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
-    public Contato getContatos() {
-        return contatos;
-    }
+    public Contato getContatos() { return contatos; }
     public void setContatos(Contato contatos) {
         this.contatos = contatos;
     }
-    public char getSexo() {
-        return sexo;
-    }
+
+    public char getSexo() { return sexo; }
     public void setSexo(char sexo) {
         this.sexo = sexo;
     }

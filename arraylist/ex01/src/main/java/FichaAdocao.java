@@ -1,5 +1,3 @@
-package pantojava.lista02.ex01.src.main.java;
-
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
@@ -47,26 +45,25 @@ public class FichaAdocao {
         return ((int)days);
     }
 
-    public Pet getPet() {
-        return pet;
+    public boolean contains(String nome){
+        boolean answer;
+        if(nome.equals(this.getPet().getName())) answer = true;
+        else answer = false;
+
+        return answer;
     }
 
+    public Pet getPet() { return pet; }
     public void setPet(Pet pet) {
         this.pet = pet;
     }
 
-    public Pessoa getGuardiao() {
-        return guardiao;
-    }
-
+    public Pessoa getGuardiao() { return guardiao; }
     public void setGuardiao(Pessoa guardiao) {
         this.guardiao = guardiao;
     }
 
-    public LocalDate getcheckout() {
-        return checkout;
-    }
-
+    public LocalDate getcheckout() { return checkout; }
     public void setcheckout(LocalDate checkout) {
         this.checkout = checkout;
     }
@@ -74,14 +71,6 @@ public class FichaAdocao {
     @Override
     public String toString() {
         return "FichaAdocao [pet=" + pet + ", guardiao=" + guardiao + ", checkout=" + checkout + "]";
-    }
-
-    public boolean contains(String nome){
-        boolean answer;
-        if(nome.equals(this.getPet().getName())) answer = true;
-        else answer = false;
-
-        return answer;
     }
 
 }

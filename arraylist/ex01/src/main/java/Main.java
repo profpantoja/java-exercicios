@@ -1,5 +1,3 @@
-package pantojava.lista02.ex01.src.main.java;
-
 import java.util.ArrayList;
 import java.time.LocalDate;
 

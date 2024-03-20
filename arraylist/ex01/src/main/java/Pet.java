@@ -1,5 +1,3 @@
-package pantojava.lista02.ex01.src.main.java;
-
 import java.time.LocalDate;
 
 public class Pet {
@@ -22,7 +20,7 @@ public class Pet {
     }
 
     public Pet(String name, String race, String species, LocalDate checkin, String color, double weight){
-        this.setName(name);
+        this.name = name;
         this.race = race;
         this.species = species;
         this.checkin = checkin;
@@ -52,43 +50,28 @@ public class Pet {
         this.race = race;
     }
 
-    public String getSpecies() {
-        return species;
-    }
-
+    public String getSpecies() { return species; }
     public void setSpecies(String species) {
         this.species = species;
     }
 
-    public LocalDate getCheckin() {
-        return checkin;
-    }
-
+    public LocalDate getCheckin() { return checkin; }
     public void setCheckin(LocalDate checkin) {
         this.checkin = checkin;
 
     }
 
-    public String getColor() {
-        return color;
-    }
-
+    public String getColor() { return color; }
     public void setColor(String color) {
         this.color = color;
     }
 
-    public double getWeight() {
-        return weight;
-    }
-
+    public double getWeight() { return weight; }
     public void setWeight(double weight) {
         this.weight = weight;
     }
 
-    public boolean isAdopted() {
-        return isAdopted;
-    }
-
+    public boolean isAdopted() { return isAdopted; }
     public void setAdopted(boolean isAdopted) {
         this.isAdopted = isAdopted;
     }
