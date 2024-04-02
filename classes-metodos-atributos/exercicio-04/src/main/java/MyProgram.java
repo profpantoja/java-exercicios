@@ -1,17 +1,19 @@
-
 public class MyProgram {
-
+    
     public static void main(String[] args) {
+        
+        int i;
 
-        int cont = 0;
-
-        for (cont = 0; cont <= 10; cont++) {
-            System.out.println(cont);
+        System.out.println("Ordem crescente:");
+        for (i=0; i<=10; i++) {
+            System.out.print(i + " ");
         }
 
-        for (cont = 10; cont > 0; cont--) {
-            System.out.println(cont);
+        System.out.println();
+        
+        System.out.println("Ordem decrescente:");
+        for (i=10; i>=0; i--) {
+            System.out.print(i + " ");
         }
-
     }
 }

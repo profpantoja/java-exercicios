@@ -1,29 +1,26 @@
 import java.util.Scanner;
 
-/**
- * MyProgram
- */
 public class MyProgram {
+    public static void main(String[] args) throws Exception {
+        
+        Scanner scan = new Scanner(System.in);
 
-    public static void main(String[] args) {
+        int nota1;
+        int nota2;
+        int media = 0;
 
-        Scanner in = new Scanner(System.in);
-        double nota1, nota2;
+        System.out.println("Digite a primeira nota do aluno:");
+        nota1 = scan.nextInt();
 
-        System.out.println("Entre com a primeira nota:");
-        nota1 = in.nextDouble();
+        System.out.println("Digite a segunda nota do aluno:");
+        nota2 = scan.nextInt();
 
-        System.out.println("Entre com a segunda nota:");
-        nota2 = in.nextDouble();
+        media = (nota1 + nota2) / 2;
 
-        double media = (nota1 + nota2) / 2;
-
-        if (media >= 7.0) {
-            System.out.println("Voce foi Aprovado!");
+        if (media >= 7) {
+            System.out.println("O aluno foi aprovado!");
         } else {
-            System.out.println("Voce foi Reprovado!");
+            System.out.println("O aluno foi reprovado!");
         }
-        in.close();
     }
-
 }

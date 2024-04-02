@@ -1,42 +1,37 @@
 import java.util.Scanner;
 
 public class MyProgram {
-
     public static void main(String[] args) {
-
-        Scanner in = new Scanner(System.in);
+        
+        Scanner scan = new Scanner(System.in);
         double a, b, c;
-        double raiz1, raiz2, imaginaria, discriminante;
+        double raiz1 = 0;
+        double raiz2 = 0;
+        double sqrtResultado = 0;
+        double delta = 0;
 
-        System.out.print("Valor do coeficiente a: ");
-        a = Double.parseDouble(in.nextLine());
+        System.out.println("Digite o valor do coeficiente 'a':");
+        a = scan.nextDouble();
+        System.out.println("Digite o valor do coeficiente 'b':");
+        b = scan.nextDouble();
+        System.out.println("Digite o valor do coeficiente 'c':");
+        c = scan.nextDouble();
 
-        System.out.print("Valor do coeficiente b: ");
-        b = Double.parseDouble(in.nextLine());
+        delta = (b * b) - (4 * (a *c));
+        sqrtResultado = Math.sqrt(delta);
 
-        System.out.print("Valor do coeficiente c: ");
-        c = Double.parseDouble(in.nextLine());
-
-        discriminante = (b * b) - (4 * a * c);
-
-        if (discriminante > 0) {
-            raiz1 = (-b + Math.sqrt(discriminante)) / (2 * a);
-            raiz2 = (-b - Math.sqrt(discriminante)) / (2 * a);
-            System.out.println("Existem duas raizes: x1 = " + raiz1 + " e x2 = " + raiz2);
+        if (a != 0) {
+            if (delta >= 0) {
+                raiz1 = (((-1) * b) - sqrtResultado) / (2 * a);
+                raiz2 = (((-1) * b) + sqrtResultado) / (2 * a);
+                System.out.println("X1 = " + raiz1);
+                System.out.println("X2 = " + raiz2);
+            } else {
+                System.out.println("Por conta de delta ser menor que zero, suas raízes são complexas.");
+            }
+        } else {
+            System.out.println("Valor de 'a' inválido para um operação de função de segundo grau.");
         }
-
-        else if (discriminante == 0) {
-            raiz1 = raiz2 = -b / (2 * a);
-            System.out.println("Existem duas raizes iguais: x1 = " + raiz1 + " e x2 = " + raiz2);
-        }
-
-        else if (discriminante < 0) {
-            raiz1 = raiz2 = -b / (2 * a);
-            imaginaria = Math.sqrt(-discriminante) / (2 * a);
-            System.out.println("Existem duas raízes complexas: x1 = " + raiz1 + " + " + imaginaria + " e x2 = " + raiz2
-                    + " - " + imaginaria);
-
-        }
-        in.close();
     }
+
 }
