@@ -6,7 +6,7 @@ public class Automovel {
     private int anoModelo;
     private String cor;
     private double quilometragem;
-    private double gerarVelocidadeMedia;
+    private double velocidadeMedia;
 
     public String getMarca() {
         return marca;
@@ -56,12 +56,12 @@ public class Automovel {
         this.quilometragem = quilometragem;
     }
 
-    public double getGerarVelocidadeMedia() {
-        return gerarVelocidadeMedia;
+    public double getVelocidadeMedia() {
+        return velocidadeMedia;
     }
 
-    public void setGerarVelocidadeMedia(double gerarVelocidadeMedia) {
-        this.gerarVelocidadeMedia = gerarVelocidadeMedia;
+    public void setVelocidadeMedia(double velocidadeMedia) {
+        this.velocidadeMedia = velocidadeMedia;
     }
 
     public void adicionarKm(int km) {
@@ -69,7 +69,7 @@ public class Automovel {
     }
 
     public void gerarVelocidadeMedia(double distanciaPercorrida, double tempo) {
-        gerarVelocidadeMedia = distanciaPercorrida / tempo;
+        velocidadeMedia = distanciaPercorrida / tempo;
     }
 
     public void acelerar() {

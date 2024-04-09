@@ -47,5 +47,7 @@ public class MyProgram {
                 System.out.println("Aluno reprovado.");
             }
         }
+
+        scan.close();
     }
 }

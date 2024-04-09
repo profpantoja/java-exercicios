@@ -25,6 +25,7 @@ public class MyProgram {
             System.out.println("O terceiro valor (" + valor3 + ") é o maior valor digitado!");
         }
 
+        scan.close();
     }
     
 }

@@ -22,5 +22,7 @@ public class MyProgram {
         } else {
             System.out.println("O aluno foi reprovado!");
         }
+
+        scan.close();
     }
 }
