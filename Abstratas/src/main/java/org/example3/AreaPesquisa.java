@@ -1,0 +1,10 @@
+package org.example3;
+
+public enum AreaPesquisa {
+
+    INTELIGENCIA_ARTIFICIAL,
+    ENGENHARIA_DE_SOFTWARE,
+    SISTEMAS_DE_INFORMACAO,
+    REDES_DE_COMPUTADORES,
+    SEGURANCA_DA_INFORMACAO
+}
