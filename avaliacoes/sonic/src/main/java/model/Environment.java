@@ -2,21 +2,41 @@ package model;
 
 import java.util.ArrayList;
 
+/** Represents an environment, contains its name, image file, width, height, score, time, ring amount, characters and objects. */
 public class Environment {
+    /** The environment's name. */
     private String name;
+    /** The environment's image file path. */
     private String image;
 
+    /** The environment's width. */
     private int width;
+    /** The environment's height. */
     private int height;
 
+    /** The character's score. */
     private int score;
+
+    /** The environment timer. */
     private double time;
+    /** The character's amount of rings. */
     private int qtdRings;
 
+    /** The environment's list of characters. */
     private ArrayList<Character> characters = new ArrayList<>();
+    /** The environment's list of objects. */
     private ArrayList<Object> objects = new ArrayList<>();
 
 
+    /** Creates an environment object with the specified values.
+     * @param name The environment's name.
+     * @param image The environment's image file path.
+     * @param width The environment's width.
+     * @param height The environment's height.
+     * @param score The character's score.
+     * @param time The environment timer.
+     * @param qtdRings The character's amount of rings.
+     */
     public Environment(String name, String image, int width, int height, int score, double time,
             int qtdRings) {
         this.name = name;
@@ -27,34 +47,66 @@ public class Environment {
         this.time = time;
     }
 
+    /**
+     * Returns the name of the environment.
+     * @return The environment's name.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Sets a new value to the environment's name.
+     * @param name The environment's name.
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Returns the image file path of the environment.
+     * @return The environment's image file path.
+     */
     public String getImage() {
         return image;
     }
 
+    /**
+     * Sets a new value to the environment's image file path.
+     * @param image The environment's image file path.
+     */
     public void setImage(String image) {
         this.image = image;
     }
 
+    /**
+     * Returns the width of the environment.
+     * @return The environment's width.
+     */
     public int getwidth() {
         return width;
     }
 
+    /**
+     * Sets a new value to the environment's width.
+     * @param width The environment's width.
+     */
     public void setwidth(int width) {
         this.width = width;
     }
 
+    /**
+     * Returns the height of the environment.
+     * @return The environment's height.
+     */
     public int getheight() {
         return height;
     }
 
+    /**
+     * Sets a new value to the environment's height.
+     * @param height The environment's height.
+     */
     public void setheight(int height) {
         this.height = height;
     }
