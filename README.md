@@ -1,7 +1,13 @@
 # java-exercicios
 Repositório das listas de exercícios da disciplina <strong>Linguagens e Técnicas de Programação II</strong> e <strong>Introdução a Orientação a Objetos</Strong>.
 
-## Como Contribuir Nesse Repositório:
+## Sumário
+- [Como Contribuir](#como-contribuir-nesse-repositório)
+- [Instruções de Branch](#instruções-úteis)
+- [Clone e Fork](#clonagem-e-fork)
+- [Abrir Pull Request](#criar-um-pull-request)
+
+## Como Contribuir Nesse Repositório
 
 - **Requisitos**: você precisa ser aluno ou monitor da disciplina ou, ainda, trabalhar em algum projeto de pesquisa.
 - **Criar uma Branch**: após clonar o projeto em alguma IDE, é preciso criar uma branch baseada em algumas das categorias abaixo, de acordo com a funcionalidade desenvolvida.
@@ -45,11 +51,50 @@ Repositório das listas de exercícios da disciplina <strong>Linguagens e Técni
 - **Solicitar mesclagem**: para que as modificações sejam refletidas no branch principal (`main`), é necessaŕio realizar um `pull request`. Esta solicitação é responsável por informar a outras pessoas sobre as alterações feitas em uma ramificação de um repositório. 
 > Utilize o GitHub para realizar esta etapa.
 
-## Instruções Úteis:
+## Instruções Úteis
 
 - **Criar uma branch a partir de uma outra**: se enventualmente modificações ocorreram em uma branch e é preciso levar essas modificações para uma outra branch.
 > Exemplo de como criar a branch wip-nova-branch a partir da branch atual.
 ```
 git checkout -b wip-nova-branch
 ```
+## Clonagem e Fork
 
+O fork cria uma cópia do repositório para a sua conta no GitHub, permitindo que você faça alterações que poderão ser implementadas nesse repositório através do [Pull Request](#criar-um-pull-request).
+
+- **Como criar um Fork**:
+  <ul>
+    <li>No canto superior direito do repositório, clique no botão "Fork".</li>
+    <li>Escolha a sua conta para criar a cópia do repositório. Ele será copiado para o seu perfil.</li>
+  </ul>
+
+ - **Clonar o Repositório Forkado**
+  Agora que você tem sua cópia do repositório, você precisa cloná-la para o seu computador para poder fazer alterações.
+  Abra o terminal no seu computador e use o comando abaixo para clonar o repositório:
+```
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+```
+```
+cd nome-do-repositorio
+```
+- **Criar uma Nova Branch**
+Antes de fazer alterações, é uma boa prática criar uma nova branch para trabalhar, seguindo a [nomenclatura do projeto](#como-contribuir-nesse-repositório).
+Criada a branch, implemente o código com as novas funcionalidades do projeto.
+
+- **Enviar as Alterações para o GitHub (Push)**
+Agora, envie a sua branch com as alterações para o seu repositório no GitHub.
+
+## Criar um Pull Request
+Agora que as alterações estão no seu repositório no GitHub, é hora de abrir um Pull Request para que o dono do repositório original possa revisar e, possivelmente, aceitar as mudanças.
+    
+1.  Clique na aba "Pull Requests"
+2.  Clique no botão "Novo Pull Request"
+3.  Selecione a branch do seu fork (a que você fez o push) e a branch main do repositório do projeto
+4.  Adicione uma descrição clara sobre as mudanças que você fez
+5.  Clique em "Criar Pull Request"
+
+### Exemplo de PR
+- Título: ```Adicionar Teste na Avaliação The Boys```
+- Descrição:
+  > Adicionando branch que satisfaz a solicitação da Issue [ número da issue ] - [ descrição da issue ]
+  > A branch implementa os arquivos na pasta [ adicionar o caminho da pasta que foi modificada, em caso de código, como testes unitários, por exemplo ]
