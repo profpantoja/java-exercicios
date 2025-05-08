@@ -7,7 +7,9 @@ import vought.Person;
 import vought.StarLight;
 import vought.StarLightCompoundV;
 import vought.Team;
-
+/**
+ * Classe que representa a Main, onde os métodos seram chamados e utilizados.
+ */
 public class MyApp {
 
     @SuppressWarnings("unused")
