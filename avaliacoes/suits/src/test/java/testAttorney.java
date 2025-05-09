@@ -1,36 +1,85 @@
+import java.time.LocalDate;
+
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class testAttorney {
     
     @Test
-    public void testTwoAttorneys() {
+    public void integrationTestTwoAttorneys() {
         
         // Junior Attorney
 
-        String mockedName = "Junior Attorney";
-        int mockedSalary = 5000;
-        String mockedDescription = "Junior Attorney is an attorney with 1 year of experience.";
+        String[] mockedNames = { 
+            "Harvey Specter", 
+            "Mike Ross" 
+        };
+        int[] mockedSalaries = { 5000, 15000 };
+        String[] mockedDescriptions = {
+            "Junior Attorney is an attorney with 1 year of experience.",
+            "Senior Attorney is an attorney with 7+ years of experience."
+        };
 
         Attorney attorney = new Attorney(
-            mockedName,
-            mockedSalary,
+            mockedNames[0],
+            mockedSalaries[0],
             1,
-            mockedDescription
+            mockedDescriptions[0]
         );
 
         // Senior Attorney
 
-        mockedName = "Senior Attorney";
-        mockedSalary = 15000;
-        mockedDescription = "Senior Attorney is an attorney with 7+ years of experience. Plus, they use to get a huge amount of money monthly.";  
-
         Attorney attorney2 = new Attorney(
-            mockedName,
-            mockedSalary,
+            mockedNames[1],
+            mockedSalaries[1],
             1,
-            mockedDescription
+            mockedDescriptions[1]
         );
+
+        // Law Firm
+
+        String mockedFirmName = "Law Firm";
+        LocalDate mockedFoundation = LocalDate.of(2020, 1, 1);
+        String mockedInsuranceQuote = "Insurance Quote";
+        String mockedGovApprovement = "Gov Approvement";
+
+
+        Law law = new Law(
+            mockedFirmName,
+            mockedFoundation,
+            mockedInsuranceQuote,
+            mockedGovApprovement
+        );
+        
+        // Test Law Firm with two attorneys
+        // Add attorneys to law firm
+        law.addAttorney(attorney);
+        law.addAttorney(attorney2);
+
+        assertEquals(mockedFirmName, law.getName());
+        assertEquals(mockedFoundation, law.getFoundation());
+        assertEquals(mockedInsuranceQuote, law.getInsuranceQuote());
+        assertEquals(mockedGovApprovement, law.getGovApprovement());
+
+        assertEquals(2, law.getAttorneys().size());
+
+        assertEquals(mockedNames[0], law.getAttorneys().get(0).getName());
+        assertEquals(mockedNames[1], law.getAttorneys().get(1).getName());
+
+        assertEquals(mockedSalaries[0], law.getAttorneys().get(0).getSalary());
+        assertEquals(mockedSalaries[1], law.getAttorneys().get(1).getSalary());
+
+        assertEquals(mockedDescriptions[0], law.getAttorneys().get(0).getDescription());
+        assertEquals(mockedDescriptions[1], law.getAttorneys().get(1).getDescription());
+
+        // Remove attorney
+        law.removeAttorney(attorney2);
+        assertEquals(1, law.getAttorneys().size());
+
+        assertEquals(mockedNames[0], law.getAttorneys().get(0).getName());
+        assertEquals(mockedSalaries[0], law.getAttorneys().get(0).getSalary());
+        assertEquals(mockedDescriptions[0], law.getAttorneys().get(0).getDescription());
+        assertEquals(1, law.getAttorneys().get(0).getExperienceLevel());
     }
 
     @Test
