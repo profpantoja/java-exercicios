@@ -19,12 +19,8 @@ public class Attorney extends TypeJob implements I_Lawyer {
             description,
             salary, 
             experienceLevel
-            );
-            
-            
-            setName("Attorney");
-            setType("Lawyer");
-        }
+        );            
+    }
         
         @Override
         public void representClients(String client) {
