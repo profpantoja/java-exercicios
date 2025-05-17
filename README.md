@@ -1,55 +1,25 @@
-# java-exercicios
-Repositório das listas de exercícios da disciplina <strong>Linguagens e Técnicas de Programação II</strong> e <strong>Introdução a Orientação a Objetos</Strong>.
+## Diagrama de Classes - Sistema de Gerenciamento de Times e Partidas
 
-## Como Contribuir Nesse Repositório:
+Segue o diagrama UML que modela as principais entidades do sistema:
 
-- **Requisitos**: você precisa ser aluno ou monitor da disciplina ou, ainda, trabalhar em algum projeto de pesquisa.
-- **Criar uma Branch**: após clonar o projeto em alguma IDE, é preciso criar uma branch baseada em algumas das categorias abaixo, de acordo com a funcionalidade desenvolvida.
+### Pessoa e Heranças
+- A classe `Pessoa` é uma superclasse com atributos comuns como `nome`, `cpf`, `dataNascimento` e listas de contatos.
+- Heranças:
+  - `Jogador`: possui atributos como `altura`, `posição`, `camisa`, e está vinculado a um `Time`.
+  - `Funcionario`: tem `salário`, `função` e uma lista de `endereços`.
 
-| Category        | Meaning                                                                     |
-| --------------- | --------------------------------------------------------------------------- |
-| `wip`           | for a work in progress                                                      |
-| `feature`       | for adding, removing or modifying a feature                                 |
-| `experimental`  | for experimenting something which is not an issue                           |
-| `hotfix`        | for quickly fixing critical issues, usually with a temporary solution Cell  |
-| `bugfix`        | for fixing a bug                                                            |
+### Contato e Tipos
+- A classe `Contato` usa uma enumeração `TipoContato` para diferenciar entre e-mail, celular, Instagram etc.
 
-> Exemplo de criação de uma branch para resolução de uma lista de exercícios:
-  ```
-  git checkout -b wip-seunome-exercicios-14-ao-20
-  ```
+### Endereço
+- Relacionado com `Funcionario`, permite múltiplos endereços para cada funcionário.
 
-- **Adicionar os arquivos**: após a implementação das funcionalidades, adicione os arquivos alterados para prepará-los para confirmação e envio a este repositório.
-> Exemplo de adição de todos os arquivos modificados:
-  ```
-  git add .
-  ```
+### Time
+- Armazena listas de jogadores titulares e reservas, além de informações como `nome`, `dataCriacao` e `cidade`.
+- Possui métodos para adicionar, remover e listar jogadores.
 
-- **Realizar o commit localmente**: confirmar as modificações que precisam ser enviadas para serem avaliadas pelo responsável do repositório. Sempre adicione uma mensagem sobre o que foi realizado na confirmação.  
-> Exemplo de um commit com uma mensagem:
-  ```
-  git commit -m "Uploading the new branch for the fixing a bug."
-  ```
+### Partida
+- Representa um jogo entre dois times (`casa` e `visitante`) com informações como `data`, `golsCasa`, `golsVisitante` e o `vencedor`.
 
-- **Efetuar o push**: envie suas modificações sempre que quiseres que tuas modificações sejam persistidas on-line no repositório e na branch criada anteriormente.
-> Exemplo de como enviar as modificações confirmadas quando a branch ainda não existir no repositório:
-  ```
-  git push --set-upstream origin wip-exercícios-14-ao-20
-  ```
-
-> Exemplo de como enviar as modificações confirmadas para o repositório:
-  ```
-  git push
-  ```
-
-- **Solicitar mesclagem**: para que as modificações sejam refletidas no branch principal (`main`), é necessaŕio realizar um `pull request`. Esta solicitação é responsável por informar a outras pessoas sobre as alterações feitas em uma ramificação de um repositório. 
-> Utilize o GitHub para realizar esta etapa.
-
-## Instruções Úteis:
-
-- **Criar uma branch a partir de uma outra**: se enventualmente modificações ocorreram em uma branch e é preciso levar essas modificações para uma outra branch.
-> Exemplo de como criar a branch wip-nova-branch a partir da branch atual.
-```
-git checkout -b wip-nova-branch
-```
-
+Imagem do Diagrama Abaixo:
+![image](https://github.com/user-attachments/assets/351ec110-b47a-4cdb-b480-e51a8952d54f)
